@@ -11,5 +11,16 @@ config_version=5
 [application]
 
 config/name="shotpouringgame"
+run/main_scene="res://scenes/world/world.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1200
+window/size/viewport_height=650
+
+[layer_names]
+
+2d_physics/layer_1="World/Bar Top"
+2d_physics/layer_2="Shot Glasses"

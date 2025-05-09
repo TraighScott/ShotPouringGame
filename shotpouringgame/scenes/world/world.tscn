@@ -1,3 +1,19 @@
-[gd_scene format=3 uid="uid://4bjpyt5v055w"]
+[gd_scene load_steps=3 format=3 uid="uid://4bjpyt5v055w"]
+
+[ext_resource type="PackedScene" uid="uid://qx2wy7d7cu1d" path="res://scenes/world/bar_top.tscn" id="1_ebmnp"]
+[ext_resource type="PackedScene" uid="uid://dgcbfhl62snye" path="res://scenes/glasses/shot_glasses.tscn" id="2_2wo4k"]
 
 [node name="World" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -27.0
+offset_top = -27.0
+offset_right = 1230.0
+offset_bottom = 678.0
+color = Color(0.773102, 0.636518, 0.542467, 1)
+
+[node name="BarTop" parent="." instance=ExtResource("1_ebmnp")]
+position = Vector2(598, 584)
+
+[node name="ShotGlasses" parent="." instance=ExtResource("2_2wo4k")]
+position = Vector2(93, 441)

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://qx2wy7d7cu1d"]
+
+[ext_resource type="Texture2D" uid="uid://it0ltwfco4xy" path="res://icon.svg" id="1_7ekpe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2f1ao"]
+size = Vector2(128.395, 128)
+
+[node name="BarTop" type="Sprite2D"]
+scale = Vector2(9.38509, 1)
+texture = ExtResource("1_7ekpe")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_2f1ao")
