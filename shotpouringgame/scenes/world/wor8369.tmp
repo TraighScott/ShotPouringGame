@@ -14,11 +14,11 @@ offset_right = 1230.0
 offset_bottom = 678.0
 color = Color(0.773102, 0.636518, 0.542467, 1)
 
-[node name="BottleSpawn" type="Marker2D" parent="."]
-position = Vector2(1114, 512)
-
 [node name="BarTop" parent="." instance=ExtResource("1_ebmnp")]
 position = Vector2(598, 584)
 
 [node name="ShotGlasses" parent="." instance=ExtResource("2_2wo4k")]
 position = Vector2(93, 441)
+
+[node name="BottleSpawn" type="Marker2D" parent="."]
+position = Vector2(1114, 512)

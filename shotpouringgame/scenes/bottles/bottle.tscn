@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dato0tuimnr3p"]
+
+[ext_resource type="Texture2D" uid="uid://ia2w0oc4hk07" path="res://assets/bottles/bottle.png" id="1_v1tcd"]
+[ext_resource type="Script" path="res://scenes/bottles/bottle.gd" id="2_7r7ch"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_heuvk"]
+resource_local_to_scene = true
+radius = 60.0
+height = 216.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ynlc7"]
+size = Vector2(85, 131)
+
+[node name="Bottle" type="RigidBody2D"]
+position = Vector2(0, -123)
+script = ExtResource("2_7r7ch")
+
+[node name="Bottle" type="Sprite2D" parent="."]
+texture = ExtResource("1_v1tcd")
+
+[node name="MoveArea" type="Area2D" parent="Bottle"]
+position = Vector2(0, 15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottle/MoveArea"]
+shape = SubResource("CapsuleShape2D_heuvk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 55.5)
+shape = SubResource("RectangleShape2D_ynlc7")
+
+[connection signal="mouse_entered" from="Bottle/MoveArea" to="Bottle" method="_on_move_area_mouse_entered"]
+[connection signal="mouse_exited" from="Bottle/MoveArea" to="Bottle" method="_on_move_area_mouse_exited"]
